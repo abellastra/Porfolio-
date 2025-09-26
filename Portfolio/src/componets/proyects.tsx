@@ -22,18 +22,15 @@ function Proyects (){
     ];
 
 
-    return(
-        <section>
-            <h2>Mis proyects</h2>
-            <div>
-                {proyects && (
-                    proyects.map((p,i)=>(
-                        <ProyectsCard key={i} {...p} />
-                    ))
-                )}
-            </div>
-
-        </section>
-    )
+  return (
+    <section className="min-h-screen w-full bg-[#86a7874D] flex items-center justify-center">
+      <div className="w-full max-w-4xl flex flex-col items-center justify-center px-4 py-8">
+        <h2 className="text-2xl font-bold mb-6">Mis proyectos</h2>
+        <div className="flex flex-col items-center gap-4">
+          {proyects && proyects.map((p, i) => <ProyectsCard key={i} {...p} />)}
+        </div>
+      </div>
+    </section>
+  );
 }
 export default Proyects

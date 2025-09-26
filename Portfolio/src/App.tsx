@@ -1,20 +1,25 @@
-import { useState } from 'react'
-import Proyects from'./componets/proyects'
-import './App.css'
-import Hero from'./componets/Hero'
-import BinaryBackground from'./componets/BinaryBackground'
+import { useState } from "react";
+import Proyects from "./componets/proyects";
+import "./App.css";
+import Hero from "./componets/Hero";
+import BinaryBackground from "./componets/BinaryBackground";
 function App() {
-
   return (
-    <main className="relative w-full h-full bg-black  z-[-1]">
+    <main
+      className="relative text-white min-h-screen h-full bg-black flex 
+     "
+    >
       <BinaryBackground />
-<div className='text-white'>
-  
-      <Hero />
-      <Proyects />
-      </div>
+
+      <aside className="w-[40%]  h-screen bg-[#0f0f0f4D] text-white fixed left-0 top-0 z-11">
+        <Hero />
+      </aside>
+
+      <aside className="fixed top-0 right-0 w-[calc(100%-50%)] h-screen bg-[#0f0f0f4D] text-white  overflow-y-auto z-10">
+        <Proyects />
+      </aside>
     </main>
   );
 }
 
-export default App
+export default App;
