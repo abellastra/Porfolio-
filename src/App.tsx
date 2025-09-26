@@ -1,4 +1,5 @@
 import { useState } from "react";
+import StackTecnologies from "./componets/StackTecnologies";
 import Proyects from "./componets/proyects";
 import "./App.css";
 import Hero from "./componets/Hero";
@@ -15,7 +16,8 @@ function App() {
         <Hero />
       </aside>
 
-      <aside className="fixed top-0 right-0 w-[calc(100%-50%)] h-screen bg-[#0f0f0f4D] text-white  overflow-y-auto z-10">
+      <aside className="fixed p-6 top-0 right-0 w-[calc(100%-50%)] h-screen bg-[#86a7874D] text-white  overflow-y-auto z-10">
+        <StackTecnologies />
         <Proyects />
       </aside>
     </main>
