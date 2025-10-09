@@ -2,7 +2,10 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 function Hero() {
   return (
     <section className=" h-full bg-[#86a7874D] flex  flex-col  items-center ">
-      <h1 className="text-4xl font-black m-[10vh]">Abel Adrian Lastra</h1>
+      <h1 className="flex items-center flex-col text-4xl font-black m-[10vh]  ">
+        Abel Adrian
+        <h1> Lastra</h1>
+      </h1>
       <div className=" w-[20vh] h-[20vh] rounded-full overflow-hidden border-4 border-[#86a787] mb-4">
         <img src="" alt="" />
       </div>

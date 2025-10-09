@@ -1,24 +1,21 @@
-import { useState } from "react";
-import StackTecnologies from "./componets/StackTecnologies";
-import Proyects from "./componets/proyects";
+import StackTecnologies from "./components/StackTecnologies";
+import Proyects from "./components/proyects";
 import "./App.css";
-import Hero from "./componets/Hero";
-import BinaryBackground from "./componets/BinaryBackground";
+import Hero from "./components/Hero";
 function App() {
   return (
     <main
-      className="relative text-white min-h-screen h-full bg-black flex 
+      className="flex flex-col md:flex-row 
      "
     >
-      <BinaryBackground />
-
-      <aside className="w-[40%]  h-screen bg-[#0f0f0f4D] text-white fixed left-0 top-0 z-11">
+      {/* <BinaryBackground /> */}
+      <aside className="w-full md:w-[50%]  h-full h-screen bg-[#0f0f0f4D] text-white  left-0 top-0 z-11">
         <Hero />
       </aside>
 
-      <aside className="fixed p-6 top-0 right-0 w-[calc(100%-50%)] h-screen bg-[#86a7874D] text-white  overflow-y-auto z-10">
-        <StackTecnologies />
+      <aside className=" p-6  md:h-screen md:ml-[5%] bg-[#86a7874D] text-white  overflow-y-auto z-10">
         <Proyects />
+        <StackTecnologies />
       </aside>
     </main>
   );
