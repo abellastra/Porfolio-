@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope} from "react-icons/fa";
 function Hero() {
   return (
     <section className=" h-full bg-[#86a7874D] flex  flex-col  items-center ">
@@ -11,7 +11,7 @@ function Hero() {
       </div>
 
       <h2 className="  text-xl">Desarollador FullStack jr</h2>
-      <div className="flex text-4xl mb-[5vh]">
+      <div className="flex  text-4xl mb-[5vh]">
         <a
           className="m-4 p-2 rounded-full hover:bg-[#86a787]  hover:shadow-[0_0_20px_#22c55e]"
           href=""
