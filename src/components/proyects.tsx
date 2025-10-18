@@ -9,7 +9,6 @@ import react from "../assets/react.png";
 import ts from "../assets/ts.png";
 import mysql from "../assets/mysql.png";
 import js from "../assets/js.png";
-import { FaCss3 } from "react-icons/fa";
 import postgresql from "../assets/postgresql.png";
 import pokemonPng from "../assets/pokemon.png";
 import organizadorTareasPNG from "../assets/OrganizadorTareas.png";
@@ -18,6 +17,19 @@ import organizadorPrestamosPNG from "../assets/organizadorPrestamosPNG.png";
 import calculadoraPNG from "../assets/claculadoraPNG.png";
 import tailwind from "../assets/tailwind.png";
 import { useEffect, useState } from "react";
+type Tech = {
+  name: string;
+  img: string;
+};
+
+type Project = {
+  title: string;
+  description: string;
+  descriptionTecnic: string;
+  tech: Tech[];
+  img: string;
+  linkGitHub: string;
+};
 
 function Proyects() {
   const proyects = [
@@ -113,12 +125,12 @@ function Proyects() {
     },
   ];
   const [typoOfFilter, setTypeOfFilter] = useState<string>("");
-  const [projectsFiltrado, setProjectsFiltrado] = useState<object[]>([]);
+  const [projectsFiltrado, setProjectsFiltrado] = useState<Project[]>([]);
 
   useEffect(() => {
-    const projects = FilterOfTecnologi(proyects, typoOfFilter);
-    if(proyects){
-    setProjectsFiltrado(projects);
+    const projectsfiltrados = FilterOfTecnologi(proyects, typoOfFilter);
+    if (proyects) {
+      setProjectsFiltrado(projectsfiltrados);
     }
   }, [typoOfFilter]);
 
@@ -139,7 +151,7 @@ function Proyects() {
           {(typoOfFilter && projectsFiltrado.length > 0
             ? projectsFiltrado
             : proyects
-          ).map((p, i) => (
+          ).map((p: Project, i) => (
             <ProyectsCard key={i} {...p} />
           ))}
         </div>
