@@ -33,7 +33,7 @@ function StackTecnologies() {
           >
             <img
               key={index}
-              className="w-20 h-20 inline-block p-1 hover:w-30   transition-transform duration-300 hover:scale-150"
+              className="w-20 p-1 hover:w-30   transition-transform duration-300 hover:scale-150"
               src={tecno.icon}
               alt=""
             />

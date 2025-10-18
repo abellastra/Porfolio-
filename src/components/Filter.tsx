@@ -1,29 +1,31 @@
 import { useState } from "react";
-function Filter() {
-  const [selectedTech, setSelectedTech] = useState("all");
 
+type props={
+  setTypeOfFilter:(value:string)=>void;
+}
+
+function Filter({ setTypeOfFilter}:props) {
   return (
-    <div>
+    <div className="flex justify-center font-bold bg-[#86a787]/50 max-w-[40vh] p-4 text-[#344c37ff]  rounded-2xl m-[5vh]">
       <label>
         Filtrar por tecnologia:
         <select
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
-            setSelectedTech(e.target.value);
+            setTypeOfFilter(e.target.value);
           }}
           name=""
           id=""
         >
-          <option value="react">All</option>
-
-          <option value="react">docker</option>
-          <option value="react">node_js</option>
+          <option value="all">Todos</option>
+          <option value="docker">docker</option>
+          <option value="node_js">node_js</option>
           <option value="react">react</option>
-          <option value="react">postgresql</option>
-          <option value="react">tailwind</option>
-          <option value="react">TypeScript</option>
-          <option value="react">JavaScript</option>
-          <option value="react">MySQL</option>
-          <option value="react">git</option>
+          <option value="postgresql">postgresql</option>
+          <option value="tailwind">tailwind</option>
+          <option value="typescript">TypeScript</option>
+          <option value="javascript">JavaScript</option>
+          <option value="mysql">MySQL</option>
+          <option value="git">git</option>
         </select>
       </label>
     </div>

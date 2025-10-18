@@ -1,23 +1,20 @@
-import { useState } from "react";
-import Proyects from "../components/proyects";
-
-
-
-
-type Project = {title:string,description:string,tech:string[],img:string,linkGitHub:string}
-  
-
-
-export const FilterOfTecnologi = (projects:Project[],type:string) => {
-
-  console.log(projects);
-console.log(type);
- if (!projects) return null;
-  
-
-
-
-
-
-
+type Project = {
+  title: string;
+  description: string;
+  tech: Tech[];
+  img: string;
+  linkGitHub: string;
+};
+type Tech={
+  name:string,
+  img:string 
 }
+export const FilterOfTecnologi = (projects: Project[], type: string) => {
+  if(!projects||!type){
+    console.error('no hay datos')
+  }
+ const projectsFiltrados = projects.filter((projects) =>
+   projects.tech.some((t) => t.name === type)
+ );
+return projectsFiltrados
+};
