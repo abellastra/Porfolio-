@@ -1,10 +1,8 @@
-import { useState } from "react";
+type props = {
+  setTypeOfFilter: (value: string) => void;
+};
 
-type props={
-  setTypeOfFilter:(value:string)=>void;
-}
-
-function Filter({ setTypeOfFilter}:props) {
+function Filter({ setTypeOfFilter }: props) {
   return (
     <div className="flex justify-center font-bold bg-[#86a787]/50 max-w-[40vh] p-4 text-[#344c37ff]  rounded-2xl m-[5vh]">
       <label>
