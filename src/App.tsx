@@ -2,6 +2,7 @@ import StackTecnologies from "./components/StackTecnologies";
 import Proyects from "./components/proyects";
 import "./App.css";
 import Hero from "./components/Hero";
+import AcademicInformation from "./components/AcademicInformation";
 function App() {
   return (
     <main
@@ -16,6 +17,7 @@ function App() {
       <aside className=" p-6  md:h-screen  bg-[#86a7874D]   overflow-y-auto ">
         <Proyects />
         <StackTecnologies />
+        <AcademicInformation />
       </aside>
     </main>
   );

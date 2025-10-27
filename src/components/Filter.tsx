@@ -4,7 +4,7 @@ type props = {
 
 function Filter({ setTypeOfFilter }: props) {
   return (
-    <div className="flex justify-center font-bold bg-[#86a787]/50 max-w-[40vh] p-4 text-[#344c37ff]  rounded-2xl m-[5vh]">
+    <div className="flex justify-center font-bold bg-[#86a787]/50 max-w-[25vh] sm:p-4 text-[#344c37ff]  rounded-2xl sm:mb-4">
       <label>
         Filtrar por tecnologia:
         <select
@@ -13,17 +13,18 @@ function Filter({ setTypeOfFilter }: props) {
           }}
           name=""
           id=""
+          className="bg-[#86a787]/50 text-lg font-bold rounded-2xl ml-4 p-1 text-[#344c37ff]  "
         >
-          <option value="all">Todos</option>
-          <option value="docker">docker</option>
-          <option value="node_js">node_js</option>
-          <option value="react">react</option>
-          <option value="postgresql">postgresql</option>
-          <option value="tailwind">tailwind</option>
-          <option value="typescript">TypeScript</option>
-          <option value="javascript">JavaScript</option>
-          <option value="mysql">MySQL</option>
-          <option value="git">git</option>
+            <option className="font-bold p-1" value="all">Todos</option>
+            <option className="font-bold p-2" value="docker">Docker</option>
+            <option className="font-bold p-2" value="node_js">Node_js</option>
+            <option className="font-bold p-2" value="react">React</option>
+            <option className="font-bold p-2" value="postgresql">Postgresql</option>
+            <option className="font-bold p-2" value="tailwind">Tailwind</option>
+            <option className="font-bold p-2" value="typescript">TypeScript</option>
+            <option className="font-bold p-2" value="javascript">JavaScript</option>
+            <option className="font-bold p-2" value="mysql">MySQL</option>
+            <option className="font-bold p-2" value="git">Git</option>
         </select>
       </label>
     </div>

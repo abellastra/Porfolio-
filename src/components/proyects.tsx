@@ -138,16 +138,17 @@ function Proyects() {
 
   return (
     <section className="min-h-screen w-full ">
-      <div className="w-full max-w-4xl flex flex-col py-8">
-        <div>
-          <h2 className="text-4xl font-bold mb-6">Mis proyectos</h2>
-          <div className="flex justify-center ">
+      <div className=" w-full max-w-4xl flex flex-col py-8">
+        <div className="flex items-center ">
+          <h2 className="text-2xl sm:text-4xl font-bold mb-6">Mis proyectos</h2>
+          <div className="ml-[7vh]">
             {" "}
             <Filter setTypeOfFilter={setTypeOfFilter} />
           </div>
+          {/* <div className="flex justify-center "> </div> */}
         </div>
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="h-[75vh] overflow-y-auto flex flex-col items-center gap-4">
           {(typoOfFilter && projectsFiltrado.length > 0
             ? projectsFiltrado
             : proyects
