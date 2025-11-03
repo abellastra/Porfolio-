@@ -68,7 +68,7 @@ function ProyectCard({
           </a>
         )}
         {descripcionStatus && (
-          <div className=" flex flex-col bg-[#86a787]/60 mt-4 items-center w-full  p-4 h-full  items-center  mb-4  rounded-4xl  overflow-y-auto">
+          <div className=" flex flex-col bg-[#86a787]/60 mt-4 items-center w-full  p-4 h-full  items-center justify-center  mb-4  rounded-4xl  overflow-y-auto">
             <h5
               className="w-full text-[#344c37ff] font-bold
  text-2xl pb-4"
