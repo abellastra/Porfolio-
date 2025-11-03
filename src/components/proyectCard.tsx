@@ -28,7 +28,7 @@ function ProyectCard({
 
   return (
     <div className="flex flex-col justify-center items-center text-white ">
-      <h2 className="bg-[#86a787]/50 font-bold text-[#344c37ff] rounded-2xl text-lg md:text-3xl p-[2px] md:p-4 mb-2">
+      <h2 className="bg-[#86a787]/50 font-bold text-[#344c37ff] rounded-2xl text-lg md:text-2xl p-[2px] md:p-4 mb-2">
         {title}
       </h2>
 
@@ -38,7 +38,7 @@ function ProyectCard({
             setDescripcionStatus((prev) => !prev);
             setDescripionTecnicStatus(false);
           }}
-          className=" hover:bg-[#023f063f]  hover:text-black font-bold absolute top-2 right-2 text-white z-20 bg-[#e3e3f12b] rounded-full px1 md:px-3 hover:scale-110  py-1 hover:shadow-[0_0_20px_#22c55e] transition-transform duration-300"
+          className=" hover:text-black font-bold absolute top-2 text-black right-2  z-20 bg-[#eaebeaff] rounded-full px1 md:px-3 hover:scale-110  py-1 hover:shadow-[0_0_20px_#22c55e] transition-transform duration-300"
         >
           {descripcionStatus ? "Ocultar description" : "ver description"}
         </button>
@@ -48,7 +48,7 @@ function ProyectCard({
             setDescripcionStatus(false);
             console.log(descripcionStatus);
           }}
-          className=" hover:bg-[#023f063f] hover:text-black  font-bold absolute top-2 left-2 text-white z-20 bg-[#e3e3f12b] rounded-full px-3 hover:scale-110  py-1 hover:shadow-[0_0_20px_#22c55e] transition-transform duration-300"
+          className=" hover:text-black  font-bold absolute top-2 left-2 text-black z-20  bg-[#eaebeaff] rounded-full px-3 hover:scale-110  py-1 hover:shadow-[0_0_20px_#22c55e] transition-transform duration-300"
         >
           {descripionTecnicStatus
             ? "Ocultar description"
@@ -61,7 +61,7 @@ function ProyectCard({
             target="_blank"
           >
             <img
-              className="h-full w-full object-cover transition-transform rounded-4xl duration-300 lg:hover:scale-110 "
+              className="h-full w-full object-cover transition-transform rounded-4xl duration-300 lg:hover:scale-103 "
               src={img}
               alt="foto"
             />

@@ -1,4 +1,3 @@
-import Filter from "../components/Filter";
 import { FilterOfTecnologi } from "../hook/FilterOfTecnologi";
 
 import ProyectsCard from "./proyectCard";
@@ -17,6 +16,11 @@ import organizadorPrestamosPNG from "../assets/organizadorPrestamosPNG.png";
 import calculadoraPNG from "../assets/claculadoraPNG.png";
 import tailwind from "../assets/tailwind.png";
 import { useEffect, useState } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+import SlideWrapper from "./SlideWrapper";
 type Tech = {
   name: string;
   img: string;
@@ -31,7 +35,7 @@ type Project = {
   linkGitHub: string;
 };
 
-function Proyects() {
+function Proyects({ typoOfFilter }: { typoOfFilter: string }) {
   const proyects = [
     //1
     {
@@ -124,9 +128,7 @@ function Proyects() {
         "https://github.com/abellastra/calculadora-de-interes-compuesto-",
     },
   ];
-  const [typoOfFilter, setTypeOfFilter] = useState<string>("");
   const [projectsFiltrado, setProjectsFiltrado] = useState<Project[]>([]);
-
   useEffect(() => {
     const projectsfiltrados = FilterOfTecnologi(proyects, typoOfFilter);
     if (proyects) {
@@ -137,27 +139,51 @@ function Proyects() {
   console.log(projectsFiltrado);
 
   return (
-    <section className="min-h-screen w-full flex justify-center ">
-      <div className=" w-full max-w-4xl flex flex-col py-8">
-        <div className="flex items-center ">
-          <h2 className="text-2xl sm:text-4xl font-bold mb-6">Mis proyectos</h2>
-          <div className="ml-[7vh]">
-            {" "}
-            <Filter setTypeOfFilter={setTypeOfFilter} />
-          </div>
-          {/* <div className="flex justify-center "> </div> */}
-        </div>
+    <div id="MisProyectos">
+      <h2 className="text-2xl sm:text-4xl font-bold mb-6">Mis proyectos</h2>
 
-        <div className="  h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#344c37] scrollbar-track-transparent flex flex-col items-center gap-4">
-          {(typoOfFilter && projectsFiltrado.length > 0
-            ? projectsFiltrado
-            : proyects
-          ).map((p: Project, i) => (
-            <ProyectsCard key={i} {...p} />
-          ))}
+      <section className=" w-full flex justify-center ">
+        <div className=" w-full max-w-6xl flex flex-col p-4 sm:py-8">
+          <section className="w-full flex justify-center overflow-hidden">
+            <div className="w-full max-w-6xl px-4">
+              <Swiper
+                modules={[Navigation]}
+                navigation
+                spaceBetween={40}
+                slidesPerView={1}
+                centeredSlides={true}
+                breakpoints={{
+                  640: { slidesPerView: 1 },
+                  1024: { slidesPerView: 2 },
+                }}
+              >
+               {(typoOfFilter && projectsFiltrado.length > 0
+              ? projectsFiltrado
+              : proyects
+            ).map((project, i) => (
+                  <SwiperSlide key={i}>
+                    <div className="w-full max-w-md mx-auto   ">
+                      <SlideWrapper>
+                        <ProyectsCard {...project} />
+                      </SlideWrapper>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </section>
+
+          {/* <div className="w-[100vh] grid  grid-flow-col grid-rows-3 gap-20">
+            {(typoOfFilter && projectsFiltrado.length > 0
+              ? projectsFiltrado
+              : proyects
+            ).map((p: Project, i) => (
+              <ProyectsCard key={i} {...p} />
+            ))}
+          </div> */}
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 export default Proyects;

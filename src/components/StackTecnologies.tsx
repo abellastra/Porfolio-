@@ -23,7 +23,7 @@ function StackTecnologies() {
   ];
 
   return (
-    <section>
+    <section id="StackTecnologico">
       <h1 className="text-4xl font-black ">Stack Tecnologico</h1>
       <div className="flex flex-wrap justify-center items-center mt-4   ">
         {tecnologies.map((tecno, index) => (

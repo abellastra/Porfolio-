@@ -3,7 +3,11 @@ import Proyects from "./components/proyects";
 import "./App.css";
 import Hero from "./components/Hero";
 import AcademicInformation from "./components/AcademicInformation";
+import SideBar from "./components/SideBar";
+import { useState } from "react";
 function App() {
+    const [typoOfFilter, setTypeOfFilter] = useState<string>("");
+  
   return (
     <main
       className="flex flex-col md:flex-row 
@@ -14,8 +18,9 @@ function App() {
         <Hero />
       </aside>
 
-      <aside className=" p-6 md:h-screen  bg-[#86a7874D]   overflow-y-auto ">
-        <Proyects />
+      <aside className="  md:h-screen  bg-[#86a7874D]   overflow-y-auto ">
+        <SideBar setTypeOfFilter={setTypeOfFilter} />
+        <Proyects typoOfFilter={typoOfFilter} />
         <StackTecnologies />
         <AcademicInformation />
       </aside>

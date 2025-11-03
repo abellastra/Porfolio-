@@ -1,6 +1,6 @@
 function AcademicInformation() {
   return (
-    <div className="flex justify-center flex-col ">
+    <div id="FormaciónAcademica" className="flex justify-center flex-col ">
       <h2 className="text-4xl font-black mb-6 text-[#2f4f4f]">
         {" "}
         Formación academica
