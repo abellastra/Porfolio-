@@ -14,7 +14,7 @@ function App() {
         <Hero />
       </aside>
 
-      <aside className=" p-6  md:h-screen  bg-[#86a7874D]   overflow-y-auto ">
+      <aside className=" p-6 md:h-screen  bg-[#86a7874D]   overflow-y-auto ">
         <Proyects />
         <StackTecnologies />
         <AcademicInformation />

@@ -137,7 +137,7 @@ function Proyects() {
   console.log(projectsFiltrado);
 
   return (
-    <section className="min-h-screen w-full ">
+    <section className="min-h-screen w-full flex justify-center ">
       <div className=" w-full max-w-4xl flex flex-col py-8">
         <div className="flex items-center ">
           <h2 className="text-2xl sm:text-4xl font-bold mb-6">Mis proyectos</h2>
@@ -148,7 +148,7 @@ function Proyects() {
           {/* <div className="flex justify-center "> </div> */}
         </div>
 
-        <div className="h-[75vh] overflow-y-auto flex flex-col items-center gap-4">
+        <div className="  h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#344c37] scrollbar-track-transparent flex flex-col items-center gap-4">
           {(typoOfFilter && projectsFiltrado.length > 0
             ? projectsFiltrado
             : proyects

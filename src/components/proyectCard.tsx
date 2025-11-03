@@ -32,7 +32,7 @@ function ProyectCard({
         {title}
       </h2>
 
-      <div className=" flex w-full max-w-[600px] h-[300px] md:h-[500px] relative">
+      <div className=" flex w-full max-w-[800px] h-[300px] md:h-[500px] relative">
         <button
           onClick={() => {
             setDescripcionStatus((prev) => !prev);
@@ -61,7 +61,7 @@ function ProyectCard({
             target="_blank"
           >
             <img
-              className="h-full w-full object-cover transition-transform rounded-4xl duration-300 hover:scale-110"
+              className="h-full w-full object-cover transition-transform rounded-4xl duration-300 lg:hover:scale-110 "
               src={img}
               alt="foto"
             />

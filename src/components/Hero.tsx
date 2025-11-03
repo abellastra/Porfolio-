@@ -41,7 +41,7 @@ function Hero() {
           target="_blank"
         ></a> */}
       </div>
-      <p className="text-lg max-w-[400px] p-4">
+      <p className="text-lg md:text-2xl max-w-[400px] p-4">
         Me formé de manera autodidacta, combinando práctica constante con
         curiosidad técnica. Trabajo con React, Node.js y TypeScript para
         desarrollar interfaces limpias, modulares y visualmente claras
