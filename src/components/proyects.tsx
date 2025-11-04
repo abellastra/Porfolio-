@@ -39,7 +39,7 @@ function Proyects({ typoOfFilter }: { typoOfFilter: string }) {
   const proyects = [
     //1
     {
-      title: "Organizador de Llamadas Falsas",
+      title: "Organizador de Llamadas ",
       description:
         "Aplicación web full stack desarrollada para crear, editar y gestionar llamadas ficticias con datos validados y persistencia en base de datos MySQL. Este proyecto me permitió integrar mis conocimientos en React (frontend), Node.js y Express (backend), TypeScript y manejo de bases de datos, logrando un producto funcional y escalable.",
       descriptionTecnic: `Frontend: 🧩 Desarrollado con React y CSS plano, incluye componentes funcionales, diseño responsive y lógica de edición y eliminación.\n\n Backend: 🔧 Construido con Express y TypeScript, expone rutas REST (GET, POST, PUT, DELETE) para gestionar llamadas ficticias.\n\n Base de datos: 🐬 Modelo relacional en MySQL, con inserción manual y conexión mediante mysql2 usando promesas y callbacks.\n\n Arquitectura: 🧠 Front y back separados, con validación básica en ambos extremos y cálculo de duración total y promedio. Proyecto funcional, listo para modularizar y escalar.`,

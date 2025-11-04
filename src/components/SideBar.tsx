@@ -1,11 +1,9 @@
 import Filter from "./Filter";
-import { useState } from "react";
 function SideBar({ setTypeOfFilter }: { setTypeOfFilter: (type: string) => void }   ) {
-    const [showFilter, setShowFilter] = useState(false);
 
   return (
-    <div className="bg-[#86a787]/40 rounded-bl-xl	rounded-br-xl sticky top-0 z-50 shadow-md	mb-[4vw] ">
-      <ul className="flex h-[7vh]  justify-center items-center space-x-6 text-sm md-[text-lg] font-bold  ml-2 ">
+    <div className="bg-[#86a787]/40 rounded-bl-xl	rounded-br-xl sticky top-0 z-50 shadow-md	mb-[4vw]  ">
+      <ul className="hidden sm:flex h-[7vh]  justify-center items-center space-x-6 text-sm md-[text-lg] font-bold  ml-2 ">
         <a
           href="#MisProyectos"
           className="shadow-lg p-1 md:p-2 rounded-sm bg-[#86a787]/70 hover:scale-105  transition-shadow duration-300"
@@ -25,8 +23,7 @@ function SideBar({ setTypeOfFilter }: { setTypeOfFilter: (type: string) => void 
           Formación academica
         </a>
         <li className=" flex justify-center items-center">
-          < button onClick={() => setShowFilter(true)}></button>
-<Filter setTypeOfFilter={setTypeOfFilter} />
+          <Filter setTypeOfFilter={setTypeOfFilter} />
         </li>
       </ul>
     </div>
