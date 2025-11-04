@@ -31,14 +31,13 @@ function ProyectCard({
       <h2 className="bg-[#86a787]/50 font-bold text-[#344c37ff] rounded-2xl text-lg md:text-2xl p-[2px] md:p-4 mb-2">
         {title}
       </h2>
-
-      <div className=" flex w-full max-w-[800px] h-[300px] md:h-[500px] relative">
+      <div className="flex ">
         <button
           onClick={() => {
             setDescripcionStatus((prev) => !prev);
             setDescripionTecnicStatus(false);
           }}
-          className=" hover:text-black font-bold absolute top-2 text-black right-2  z-20 bg-[#eaebeaff] rounded-full px1 md:px-3 hover:scale-110  py-1 hover:shadow-[0_0_20px_#22c55e] transition-transform duration-300"
+          className=" hover:text-black font-bold  top-2 text-black right-2  z-20 bg-[#eaebeaff] rounded-full px1 md:px-3 hover:scale-110  py-1 transition-transform m-2 duration-300"
         >
           {descripcionStatus ? "Ocultar description" : "ver description"}
         </button>
@@ -48,12 +47,15 @@ function ProyectCard({
             setDescripcionStatus(false);
             console.log(descripcionStatus);
           }}
-          className=" hover:text-black  font-bold absolute top-2 left-2 text-black z-20  bg-[#eaebeaff] rounded-full px-3 hover:scale-110  py-1 hover:shadow-[0_0_20px_#22c55e] transition-transform duration-300"
+          className=" hover:text-black  font-bold  top-0 left-0 text-black z-20  bg-[#eaebeaff] rounded-full px-3 hover:scale-110  py-1 transition-transform  m-2 duration-300"
         >
           {descripionTecnicStatus
             ? "Ocultar description"
             : " description tecnica"}
         </button>
+      </div>
+
+      <div className=" flex w-full max-w-[800px] h-[300px] md:h-[500px] relative">
         {!descripcionStatus && !descripionTecnicStatus && (
           <a
             className="flex justify-center items-center"

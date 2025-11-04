@@ -1,18 +1,19 @@
 function AcademicInformation() {
   return (
-    <div id="FormaciónAcademica" className="flex justify-center flex-col ">
-      <h2 className="text-4xl font-black mb-6 text-[#2f4f4f]">
+    <div
+      id="FormaciónAcademica"
+      className="flex justify-center items-center flex-col w-[80vw] md:w-[50vw]  pt-[8vw]"
+    >
+      <h2 className="text-3xl font-black mb-6 text-[#2f4f4f]">
         {" "}
         Formación academica
-      </h2>
-
+      </h2>{" "}
       <section className=" shadow-2xl font-medium rounded-3xl py-10 px-10">
-        {" "}
         {/**        // bg-[#93a48c8e]
          */}
         <div className="space-y-4 text-base leading-relaxed">
           <div className="flex justify-center items-center mb-4">
-            <p className="sm:text-xl font-bold">
+            <p className="sm:text-xl text-base font-bold">
               Aunque no tengo formación universitaria formal, he construido una
               base sólida como desarrollador full stack a través de aprendizaje
               autodidacta, cursos prácticos y proyectos reales.

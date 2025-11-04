@@ -4,19 +4,18 @@ type props = {
 
 function Filter({ setTypeOfFilter }: props) {
   return (
-    <div className="flex justify-center font-bold max-w-[25vh] sm:p-4 text-[#344c37ff]  rounded-2xl sm:mb-4">
-      <label>
-        Filtrar por tecnologia:
+    <div className="flex justify-center items-center">
+      <label className=" font-bold max-w-[25vh] sm:p-4 text-black">
         <select
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
             setTypeOfFilter(e.target.value);
           }}
           name=""
           id=""
-          className="bg-[#86a787]/50 text-sm md:text-lg font-bold rounded-2xl ml-4 p-1 text-[#344c37ff]  "
+          className="shadow-lg  md:p-2 p-1 rounded-sm bg-[#86a787]/70 hover:scale-105 transition-shadow duration-300 "
         >
           <option className="font-bold " value="all">
-            Todos
+            fltro de tecnologia
           </option>
           <option className="font-bold p-2" value="docker">
             Docker
