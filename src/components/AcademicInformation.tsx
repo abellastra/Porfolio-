@@ -2,7 +2,7 @@ function AcademicInformation() {
   return (
     <div
       id="FormaciónAcademica"
-      className="flex justify-center items-center flex-col w-[80vw] md:w-[50vw]  pt-[8vw]"
+      className="flex justify-center items-center flex-col w-[80vw] md:w-[50vw]  pt-[2vw]"
     >
       <h2 className="text-3xl font-black mb-6 text-[#2f4f4f]">
         {" "}

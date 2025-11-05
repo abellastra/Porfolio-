@@ -40,11 +40,11 @@ function StackTecnologies({ setTypeOfFilter ,typoOfFilter }: { setTypeOfFilter: 
       <h1 className="text-3xl font-black mb-6 text-[#2f4f4f] ">
         Stack Tecnologico
       </h1>
-      <div className="flex flex-wrap justify-center items-center mt-4  w-[40vw] ">
+      <div className="flex flex-row  justify-center items-center mt-4 w-[90vw] md:w-[60vw] ">
         {tecnologies.map((tecno, index) => (
           <div
             // className="hover:scale-105 w-[15vw] md:w-[10vw] lg:w-[5vw] h-[x|15vh] bg-[#86a787]/60 border-2 border-transparent  overflow-hidden hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e] m-2 p-2 rounded-4xl"
-            className={`hover:scale-105 w-[15vw] md:w-[10vw] lg:w-[5vw] h-[x|15vh] bg-[#86a787]/60 border-2 border-transparent  overflow-hidden hover:bg-[#86a787] m-2 p-2 rounded-4xl
+            className={`hover:cursor-pointer  hover:scale-105 w-[15vw] md:w-[10vw] lg:w-[4vw] h-[x|15vh] bg-[#86a787]/60 border-2 border-transparent  overflow-hidden hover:bg-[#86a787] m-1 p-1 rounded-4xl
               ${
                 typoOfFilter === tecno.name
                   ? "shadow-[0_0_30px_#22c55e] bg-[#86a787]"
@@ -57,7 +57,7 @@ function StackTecnologies({ setTypeOfFilter ,typoOfFilter }: { setTypeOfFilter: 
               <source srcSet={tecno.iconWebp} type="image/webp" />
               <img
                 key={index}
-                className="w-20 p-1 hover:w-30   transition-transform duration-300 "
+                className="p-1 hover:w-30   transition-transform duration-300 "
                 src={tecno.icon}
                 alt=""
               />

@@ -41,7 +41,7 @@ function Proyects({ typoOfFilter }: { typoOfFilter: string }) {
   return (
     <div
       id="MisProyectos  "
-      className=" flex justify-center flex-col mb-[4vw] w-[80vw] md:w-[60vw] "
+      className=" flex justify-center flex-col mb-[1vw] w-[80vw] md:w-[60vw] "
     >
       <div className="flex items-center justify-center">
         {" "}
@@ -54,7 +54,7 @@ function Proyects({ typoOfFilter }: { typoOfFilter: string }) {
         <div className=" w-full max-w-6xl flex flex-col p-4 sm:py-8">
           <section className="w-full flex justify-center overflow-hidden">
             <div className="w-full max-w-6xl px-4 relative">
-              <button className="swiper-button-prev-custom absolute left-0 top-10 md:top-0 h-full w-[15vw] z-50 flex justify-center items-center  md:bg-white/20 hover:bg-green-100/10 transition ">
+              <button className="hover:cursor-pointer swiper-button-prev-custom absolute left-0 top-10 md:top-0 h-full w-[15vw] z-50 flex justify-center items-center  md:bg-white/20 hover:bg-green-100/10 transition ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-16 w-16 text-green-900"
@@ -71,7 +71,7 @@ function Proyects({ typoOfFilter }: { typoOfFilter: string }) {
                 </svg>
               </button>
 
-              <button className="swiper-button-next-custom absolute right-0 top-10 md:top-0 h-full w-[15vw] z-50 flex justify-center items-center md:bg-white/20 hover:bg-green-100/10 transition ">
+              <button className="hover:cursor-pointer  swiper-button-next-custom absolute right-0 top-10 md:top-0 h-full w-[15vw] z-50 flex justify-center items-center md:bg-white/20 hover:bg-green-100/10 transition ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-16 w-16 text-green-900"

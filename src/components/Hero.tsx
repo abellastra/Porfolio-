@@ -1,8 +1,8 @@
-import { FaGithub, FaLinkedin, FaEnvelope} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload} from "react-icons/fa";
 import fotoMia from "../assets/fotoMia.jpg";
 function Hero() {
   return (
-    <section className=" h-full bg-[#86a7874D] flex  flex-col  items-center ">
+    <section className=" h-full bg-[#86a7874D] flex  flex-col   items-center ">
       <h1 className="flex items-center flex-col text-4xl font-black m-[10vh]  ">
         Abel Adrian
         <h1> Lastra</h1>
@@ -12,29 +12,41 @@ function Hero() {
       </div>
 
       <h2 className="  text-xl">Desarollador FullStack jr</h2>
-      <div className="flex  text-4xl mb-[5vh]">
+      <div className="flex   mb-[5vh]">
         <a
-          className="m-4 p-2 rounded-full hover:bg-[#86a787]  hover:shadow-[0_0_20px_#22c55e]"
+          className="text-4xl m-4 p-2 rounded-full hover:bg-[#86a787]  hover:shadow-[0_0_20px_#22c55e]"
           href="https://github.com/abellastra"
           target="_blank"
         >
           <FaGithub />
         </a>
         <a
-          className="m-4 p-2 rounded-full hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]"
+          className="text-4xl m-4 p-2 rounded-full hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]"
           href="https://www.linkedin.com/in/abel-lastra-3b86852b6/"
           target="_blank"
         >
           <FaLinkedin />
         </a>
-
         <a
+          href="/CV-Abel-Adrian-Lastra.pdf"
+          download="CV-Abel-Adrian-Lastra.pdf"
+          className=" rounded-lg flex items-center gap-2 bg-text-white  rounded  transition"
+        >
+          <div className=" text-3xl p-2 rounded-2xl flex items-center hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]">
+            {" "}
+            <FaDownload />
+            <span className=" text-2xl"> CV</span>
+          </div>
+        </a>
+
+        {/* <a
           href="/CV-Abel-Adrian-Lastra.pdf"
           download
           className="m-4 p-2 rounded-full hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]"
         >
-          <FaEnvelope />
+          <FaDownload />
         </a>
+        <samp>cv</samp> */}
         {/* <a
           className="m-4 p-2 rounded-full hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]"
           href=""
