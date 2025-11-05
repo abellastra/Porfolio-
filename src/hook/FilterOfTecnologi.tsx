@@ -1,6 +1,7 @@
 type Tech = {
   name: string;
   img: string;
+  imgWepp: string;
 };
 
 type Project = {
@@ -9,6 +10,7 @@ type Project = {
   descriptionTecnic: string;
   tech: Tech[];
   img: string;
+  imgWepp: string;
   linkGitHub: string;
 };
 

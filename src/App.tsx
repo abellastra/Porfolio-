@@ -21,7 +21,10 @@ function App() {
       <aside className="  md:h-screen  bg-[#86a7874D]  w-[95vw] overflow-y-auto  flex flex-col justify-cnter items-center">
         <SideBar setTypeOfFilter={setTypeOfFilter} />
         <Proyects typoOfFilter={typoOfFilter} />
-        <StackTecnologies />
+        <StackTecnologies
+          setTypeOfFilter={setTypeOfFilter}
+          typoOfFilter={typoOfFilter}
+        />
         <AcademicInformation />
       </aside>
     </main>

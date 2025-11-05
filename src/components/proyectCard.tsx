@@ -10,6 +10,7 @@ type Props = {
   descriptionTecnic: string;
   tech:Tech[]
   img: string;
+  imgWepp: string;
   linkGitHub: string;
   
 };
@@ -20,6 +21,7 @@ function ProyectCard({
   descriptionTecnic,
   tech,
   img,
+  imgWepp,
   linkGitHub,
 }: Props) {
   const [descripcionStatus, setDescripcionStatus] = useState(false);
@@ -62,18 +64,21 @@ function ProyectCard({
             href={linkGitHub}
             target="_blank"
           >
-            <img
-              className="h-full w-full object-cover transition-transform rounded-4xl duration-300 lg:hover:scale-103 "
-              src={img}
-              alt="foto"
-            />
+            <picture className="w-full h-full">
+              <source srcSet={imgWepp} type="image/webp" />
+              <img
+                className="h-full w-full object-cover transition-transform rounded-4xl duration-300 lg:hover:scale-103 "
+                src={img}
+                alt="foto"
+              />
+            </picture>
           </a>
         )}
         {descripcionStatus && (
-          <div className=" flex flex-col bg-[#86a787]/60 mt-4 items-center w-full  p-4 h-full  items-center justify-center  mb-4  rounded-4xl  overflow-y-auto">
+          <div className=" flex flex-col bg-[#86a787]/40 mt-4 items-center w-full  p-4 h-full  items-center justify-center  mb-4  rounded-4xl  overflow-y-auto">
             <h5
-              className="w-full text-[#344c37ff] font-bold
- text-2xl pb-4"
+              className="w-full text-[#344c37ff] font-semibold
+ text-lg sm:text-2xl pb-4"
             >
               {description}
             </h5>
@@ -81,17 +86,17 @@ function ProyectCard({
         )}
 
         {descripionTecnicStatus && (
-          <div className=" flex font-bold text-[#344c37ff] flex-col bg-[#86a787]/80 w-full h-full  items-center   rounded-4xl  overflow-y-auto  hover:scale-105  transition duration-600 ease-in-out ">
-            <h5 className="w-full pr-10 pl-10 pt-12 flex justify-center text-xl  hover:z-29 whitespace-pre-line ">
+          <div className=" flex font-bold text-[#344c37ff] flex-col bg-[#86a787]/40 w-full h-full  items-center   rounded-2xl  overflow-y-auto  hover:scale-105  transition duration-600 ease-in-out ">
+            <h5 className="w-full pr-10 pl-10 pt-12 flex justify-center text-xl  whitespace-pre-line ">
               {descriptionTecnic}
             </h5>
             <h4 className="whitespace-pre-line text-sm p-4"></h4>
-            <h1 className="text-2xl">Tecnologias implementadas</h1>
+            <h1 className="text-lg sm:text-2xl">Tecnologias implementadas</h1>
 
             <div className=" grid  grid-cols-6  mt-1 ">
               {tech.map((t, i) => (
                 <div
-                  className="bg-[#86a787] w-[5vh] m-2 p-1 hover:shadow-[0_0_20px_#22c55e]  max-w[10vh]   rounded-3xl"
+                  className="bg-[#86a787] w-[5vh] m-2 p-1 hover:shadow-[0_0_20px_#22c55e]  max-w[10vh]   rounded-xl"
                   key={i}
                 >
                   <img
