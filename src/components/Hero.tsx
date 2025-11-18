@@ -12,7 +12,7 @@ function Hero() {
       </div>
 
       <h2 className="  text-xl">Desarollador FullStack jr</h2>
-      <div className="flex   mb-[5vh]">
+      <div className="flex   mb-[vh]">
         <a
           className="text-4xl m-4 p-2 rounded-full hover:bg-[#86a787]  hover:shadow-[0_0_20px_#22c55e]"
           href="https://github.com/abellastra"
@@ -28,31 +28,18 @@ function Hero() {
           <FaLinkedin />
         </a>
         <a
-          href="/CV-Abel-Adrian-Lastra.pdf"
-          download="CV-Abel-Adrian-Lastra.pdf"
-          className=" rounded-lg flex items-center gap-2 bg-text-white  rounded  transition"
-        >
-          <div className=" text-3xl p-2 rounded-2xl flex items-center hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]">
-            {" "}
-            <FaDownload />
-            <span className=" text-2xl"> CV</span>
-          </div>
-        </a>
-
-        {/* <a
-          href="/CV-Abel-Adrian-Lastra.pdf"
-          download
-          className="m-4 p-2 rounded-full hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]"
-        >
-          <FaDownload />
-        </a>
-        <samp>cv</samp> */}
-        {/* <a
-          className="m-4 p-2 rounded-full hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]"
-          href=""
+          className="text-4xl m-4 p-2 rounded-full hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e]"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=abelastra0@gmail.com&su=Contacto"
           target="_blank"
-        ></a> */}
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <FaEnvelope />
+        </a>cd
       </div>
+      <a href="/CV-Abel-Adrian-Lastra.pdf" download="CV-Abel-Adrian-Lastra.pdf">
+        <span className=" text-2xl font-bold"> Descargar CV </span>
+      </a>
       <p className="text-lg md:text-2xl max-w-[400px] p-4">
         Me formé de manera autodidacta, combinando práctica constante con
         curiosidad técnica. Trabajo con React, Node.js y TypeScript para
