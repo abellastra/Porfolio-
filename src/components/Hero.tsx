@@ -35,10 +35,10 @@ function Hero() {
         >
           {" "}
           <FaEnvelope />
-        </a>cd
+        </a>
       </div>
       <a href="/CV-Abel-Adrian-Lastra.pdf" download="CV-Abel-Adrian-Lastra.pdf">
-        <span className=" text-2xl font-bold"> Descargar CV </span>
+        <span className=" text-2xl font-bold bg-[#86a787]/90 p-1 rounded-xl"> Descargar CV </span>
       </a>
       <p className="text-lg md:text-2xl max-w-[400px] p-4">
         Me formé de manera autodidacta, combinando práctica constante con
