@@ -116,15 +116,6 @@ function Proyects({ typoOfFilter }: { typoOfFilter: string }) {
               </Swiper>
             </div>
           </section>
-
-          {/* <div className="w-[100vh] grid  grid-flow-col grid-rows-3 gap-20">
-            {(typoOfFilter && projectsFiltrado.length > 0
-              ? projectsFiltrado
-              : proyects
-            ).map((p: Project, i) => (
-              <ProyectsCard key={i} {...p} />
-            ))}
-          </div> */}
         </div>
       </section>
     </div>
