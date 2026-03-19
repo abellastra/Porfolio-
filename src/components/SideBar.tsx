@@ -1,32 +1,35 @@
 import Filter from "./Filter";
-function SideBar({ setTypeOfFilter }: { setTypeOfFilter: (type: string) => void }   ) {
 
+function SideBar({ setTypeOfFilter }: { setTypeOfFilter: (type: string) => void }) {
   return (
-    <div className="bg-[#86a787]/40 rounded-bl-xl	rounded-br-xl sticky top-0 z-50 shadow-md	mb-[1vw] z-90 ">
-      <ul className=" hidden sm:flex h-[7vh]  justify-center items-center space-x-6 text-sm md-[text-lg] font-bold  ml-2 ">
+    <div className="bg-[#1a2e1a]/95 backdrop-blur-sm border-b border-[#86a787]/30 sticky top-0 z-50 shadow-lg w-full">
+      {/* Links de navegación */}
+      <div className="flex items-center justify-center gap-1 px-3 pt-2 pb-1 overflow-x-auto scrollbar-none">
         <a
           href="#MisProyectos"
-          className="hover:cursor-pointer  shadow-lg p-1 md:p-2 rounded-sm bg-[#86a787]/70 hover:scale-105  transition-shadow duration-300"
+          className="whitespace-nowrap text-gray-300 hover:text-white text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-[#86a787]/40 transition-all duration-200"
         >
-          mis Proyectos
+          Mis Proyectos
         </a>
         <a
-          className="hover:cursor-pointer  shadow-lg  md:p-2 p-1 rounded-sm bg-[#86a787]/70 hover:scale-105 transition-shadow duration-300"
           href="#StackTecnologico"
+          className="whitespace-nowrap text-gray-300 hover:text-white text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-[#86a787]/40 transition-all duration-200"
         >
-          Stack Tecnologico
+          Stack Tecnológico
         </a>
         <a
-          className="hover:cursor-pointer  shadow-lg  md:p-2 p-1 rounded-sm bg-[#86a787]/70 hover:scale-105 transition-shadow duration-300"
           href="#FormaciónAcademica"
+          className="whitespace-nowrap text-gray-300 hover:text-white text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-[#86a787]/40 transition-all duration-200"
         >
-          Formación academica
+          Formación Académica
         </a>
-        <li className=" flex justify-center items-center">
-          <Filter setTypeOfFilter={setTypeOfFilter} />
-        </li>
-      </ul>
+      </div>
+      {/* Filtro */}
+      <div className="flex justify-center pb-2">
+        <Filter setTypeOfFilter={setTypeOfFilter} />
+      </div>
     </div>
   );
 }
+
 export default SideBar;

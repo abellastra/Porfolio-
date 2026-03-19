@@ -9,24 +9,21 @@ function App() {
     const [typoOfFilter, setTypeOfFilter] = useState<string>("");
   
   return (
-    <main
-      className="flex flex-col md:flex-row 
-     "
-    >
-      {/* <BinaryBackground /> */}
-      <aside className="w-full md:w-[50%] text-white h-full h-screen bg-[#0f0f0f4D]   left-0 top-0 ">
-        <Hero />
-      </aside>
+    <main className="min-h-screen bg-[#1a2e1a] text-white">
+      <SideBar setTypeOfFilter={setTypeOfFilter} />
 
-      <aside className="  md:h-screen  bg-[#86a7874D]  w-[95vw] overflow-y-auto  flex flex-col justify-cnter items-center">
-        <SideBar setTypeOfFilter={setTypeOfFilter} />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col gap-16 sm:gap-20 pb-20">
+        <Hero />
+        <hr className="border-[#86a787]/20" />
         <Proyects typoOfFilter={typoOfFilter} />
+        <hr className="border-[#86a787]/20" />
         <StackTecnologies
           setTypeOfFilter={setTypeOfFilter}
           typoOfFilter={typoOfFilter}
         />
+        <hr className="border-[#86a787]/20" />
         <AcademicInformation />
-      </aside>
+      </div>
     </main>
   );
 }

@@ -1,0 +1,8 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html, body, #root {
+  background-color: #1a2e1a;
+  scroll-behavior: smooth;
+}

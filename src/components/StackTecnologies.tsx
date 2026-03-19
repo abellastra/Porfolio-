@@ -35,36 +35,48 @@ function StackTecnologies({ setTypeOfFilter ,typoOfFilter }: { setTypeOfFilter: 
   return (
     <section
       id="StackTecnologico"
-      className="flex flex-col justify-center items-center"
+      className="flex flex-col justify-center items-start w-full"
     >
-      <h1 className="text-3xl font-black mb-6 text-[#2f4f4f] ">
-        Stack Tecnologico
-      </h1>
-      <div className="flex flex-row  justify-center items-center mt-4 w-[90vw] md:w-[60vw] ">
+      <h2 className="text-3xl font-black mb-8 text-white">
+        Stack Tecnológico
+      </h2>
+      <div className="flex flex-wrap gap-4">
         {tecnologies.map((tecno, index) => (
-          <div
-            // className="hover:scale-105 w-[15vw] md:w-[10vw] lg:w-[5vw] h-[x|15vh] bg-[#86a787]/60 border-2 border-transparent  overflow-hidden hover:bg-[#86a787] hover:shadow-[0_0_20px_#22c55e] m-2 p-2 rounded-4xl"
-            className={`hover:cursor-pointer  hover:scale-105 w-[15vw] md:w-[10vw] lg:w-[4vw] h-[x|15vh] bg-[#86a787]/60 border-2 border-transparent  overflow-hidden hover:bg-[#86a787] m-1 p-1 rounded-4xl
-              ${
-                typoOfFilter === tecno.name
-                  ? "shadow-[0_0_30px_#22c55e] bg-[#86a787]"
-                  : ""
-              }`}
+          <button
             key={index}
-            onClick={() => setTypeOfFilter(tecno.name)}
+            onClick={() => setTypeOfFilter(tecno.name === typoOfFilter ? "" : tecno.name)}
+            className={`flex flex-col items-center gap-1.5 cursor-pointer group transition-all duration-200 ${
+              typoOfFilter === tecno.name ? "scale-110" : "hover:scale-110"
+            }`}
           >
-            <picture className="w-full h-full">
-              <source srcSet={tecno.iconWebp} type="image/webp" />
-              <img
-                key={index}
-                className="p-1 hover:w-30   transition-transform duration-300 "
-                src={tecno.icon}
-                alt=""
-              />
-            </picture>
-          </div>
+            <div
+              className={`w-14 h-14 p-2 rounded-xl border-2 transition-all duration-200 ${
+                typoOfFilter === tecno.name
+                  ? "bg-[#86a787] border-[#22c55e] shadow-[0_0_20px_#22c55e]"
+                  : "bg-[#86a787]/40 border-[#86a787]/50 hover:bg-[#86a787]/70 hover:border-[#86a787]"
+              }`}
+            >
+              <picture className="w-full h-full">
+                <source srcSet={tecno.iconWebp} type="image/webp" />
+                <img className="w-full h-full object-contain" src={tecno.icon} alt={tecno.name} />
+              </picture>
+            </div>
+            <span className={`text-xs font-medium capitalize transition-colors duration-200 ${
+              typoOfFilter === tecno.name ? "text-[#86a787]" : "text-gray-400 group-hover:text-gray-200"
+            }`}>
+              {tecno.name.replace("_", ".")}
+            </span>
+          </button>
         ))}
       </div>
+      {typoOfFilter && (
+        <button
+          onClick={() => setTypeOfFilter("")}
+          className="mt-6 text-sm text-gray-400 hover:text-white underline transition-colors duration-200"
+        >
+          Quitar filtro
+        </button>
+      )}
     </section>
   );
 }
