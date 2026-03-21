@@ -5,12 +5,10 @@ type props = {
 function Filter({ setTypeOfFilter }: props) {
   return (
     <select
-      onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
-        setTypeOfFilter(e.target.value === "all" ? "" : e.target.value);
-      }}
-      className="bg-[#86a787]/20 border border-[#86a787]/40 text-gray-300 text-xs font-semibold px-3 py-1.5 rounded-lg focus:outline-none focus:border-[#86a787] transition-all duration-200"
+      onChange={(e) => setTypeOfFilter(e.target.value === "all" ? "" : e.target.value)}
+      className="bg-zinc-800 border border-zinc-700 text-zinc-400 text-xs font-medium px-3 py-1.5 rounded-lg focus:outline-none focus:border-emerald-500 focus:text-white hover:border-zinc-600 transition-all duration-200 cursor-pointer"
     >
-      <option value="all">Filtrar por tecnología</option>
+      <option value="all">Filtrar tecnología</option>
       <option value="docker">Docker</option>
       <option value="node_js">Node.js</option>
       <option value="react">React</option>
