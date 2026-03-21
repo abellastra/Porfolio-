@@ -1,8 +1,14 @@
 * {
   font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
 
-html, body, #root {
-  background-color: #1a2e1a;
+html {
   scroll-behavior: smooth;
+  background-color: #09090b;
+}
+
+body, #root {
+  background-color: #09090b;
+  color: #f4f4f5;
 }
