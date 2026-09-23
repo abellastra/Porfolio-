@@ -12,6 +12,7 @@ type Project = {
   img: string;
   imgWepp: string;
   linkGitHub: string;
+  linkDemo?: string;
 };
 
 export const FilterOfTecnologi = (

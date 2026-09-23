@@ -25,3 +25,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Declaraciones generadas por tsc -b
+src/**/*.d.ts
+!src/vite-env.d.ts
+!src/type/*.d.ts
+vite.config.d.ts

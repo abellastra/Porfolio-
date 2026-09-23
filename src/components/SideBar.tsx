@@ -8,6 +8,12 @@ function SideBar({ setTypeOfFilter }: { setTypeOfFilter: (type: string) => void 
         {/* Links */}
         <div className="flex items-center gap-1 overflow-x-auto scrollbar-none">
           <a
+            href="#Experiencia"
+            className="whitespace-nowrap text-zinc-400 hover:text-white text-xs sm:text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-zinc-800 transition-all duration-200"
+          >
+            Experiencia
+          </a>
+          <a
             href="#MisProyectos"
             className="whitespace-nowrap text-zinc-400 hover:text-white text-xs sm:text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-zinc-800 transition-all duration-200"
           >

@@ -19,15 +19,31 @@ import jsWepp from "../assets/js.webp";
 import gitWebp from "../assets/git.webp";
 
 const tecnologies = [
-  { iconWebp: dockerWepp,    icon: docker,    name: "Docker" },
-  { iconWebp: nodeJsWepp,    icon: node_js,   name: "Node.js" },
-  { iconWebp: reactWepp,     icon: react,     name: "React" },
-  { iconWebp: postgresqlWepp,icon: postgresql, name: "PostgreSQL" },
-  { iconWebp: tailwindWepp,  icon: tailwind,  name: "Tailwind" },
-  { iconWebp: tsWepp,        icon: ts,        name: "TypeScript" },
-  { iconWebp: jsWepp,        icon: js,        name: "JavaScript" },
-  { iconWebp: mysqlWepp,     icon: mysql,     name: "MySQL" },
-  { iconWebp: gitWebp,       icon: git,       name: "Git" },
+  { iconWebp: dockerWepp, icon: docker, name: "Docker" },
+  { iconWebp: nodeJsWepp, icon: node_js, name: "Node.js" },
+  { iconWebp: reactWepp, icon: react, name: "React" },
+  { iconWebp: postgresqlWepp, icon: postgresql, name: "PostgreSQL" },
+  { iconWebp: tailwindWepp, icon: tailwind, name: "Tailwind" },
+  { iconWebp: tsWepp, icon: ts, name: "TypeScript" },
+  { iconWebp: jsWepp, icon: js, name: "JavaScript" },
+  { iconWebp: mysqlWepp, icon: mysql, name: "MySQL" },
+  { iconWebp: gitWebp, icon: git, name: "Git" },
+];
+
+const otherSkills = [
+  { group: "Frontend", items: ["HTML", "CSS", "Vite", "Next.js", "tRPC"] },
+  {
+    group: "Backend",
+    items: ["Express", "Fastify", "REST APIs", "Go", "BullMQ", "NextAuth"],
+  },
+  { group: "Databases", items: ["Redis", "TimescaleDB", "Drizzle ORM"] },
+  { group: "Testing", items: ["Playwright", "Testcontainers"] },
+  {
+    group: "IA / APIs",
+    items: ["OpenAI", "Claude AI", "Gemini", "Spotify API", "OAuth 2.0"],
+  },
+  { group: "DevOps", items: ["AWS EC2", "nginx", "pm2", "GitHub Actions"] },
+  { group: "Tools", items: ["GitHub", "Turborepo", "pnpm", "Linear"] },
 ];
 
 // Mapeo nombre display → clave de filtro
@@ -51,9 +67,14 @@ function StackTecnologies({
   typoOfFilter: string;
 }) {
   return (
-    <section id="StackTecnologico" className="flex flex-col w-full gap-8 scroll-mt-20">
+    <section
+      id="StackTecnologico"
+      className="flex flex-col w-full gap-8 scroll-mt-20"
+    >
       <div>
-        <h2 className="text-2xl sm:text-3xl font-black text-white">Stack Tecnológico</h2>
+        <h2 className="text-2xl sm:text-3xl font-black text-white">
+          Stack Tecnológico
+        </h2>
         <p className="text-zinc-500 text-sm mt-1">
           Hacé click en una tecnología para filtrar proyectos
         </p>
@@ -93,6 +114,25 @@ function StackTecnologies({
             </button>
           );
         })}
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <p className="text-zinc-500 text-xs font-medium uppercase tracking-wider">
+          También trabajo con
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {otherSkills.flatMap(({ group, items }) =>
+            items.map((item) => (
+              <span
+                key={item}
+                title={group}
+                className="text-xs font-medium text-zinc-300 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-lg"
+              >
+                {item}
+              </span>
+            )),
+          )}
+        </div>
       </div>
 
       {typoOfFilter && (
