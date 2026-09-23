@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaGithub, FaChevronDown } from "react-icons/fa";
+import { FaGithub, FaChevronDown, FaExternalLinkAlt } from "react-icons/fa";
 
 type Tech = {
   name: string;
@@ -13,9 +13,10 @@ type Props = {
   img: string;
   imgWepp: string;
   linkGitHub: string;
+  linkDemo?: string;
 };
 
-function ProyectCard({ title, description, descriptionTecnic, tech, img, imgWepp, linkGitHub }: Props) {
+function ProyectCard({ title, description, descriptionTecnic, tech, img, imgWepp, linkGitHub, linkDemo }: Props) {
   const [activeTab, setActiveTab] = useState<null | "desc" | "tecnic">(null);
 
   return (
@@ -58,15 +59,29 @@ function ProyectCard({ title, description, descriptionTecnic, tech, img, imgWepp
         {/* Título */}
         <div className="flex items-start justify-between gap-2">
           <h2 className="font-bold text-white text-base leading-snug">{title}</h2>
-          <a
-            href={linkGitHub}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-600 hover:text-emerald-400 transition-colors duration-200 shrink-0 mt-0.5"
-            aria-label="GitHub"
-          >
-            <FaGithub className="text-lg" />
-          </a>
+          <div className="flex items-center gap-3 shrink-0 mt-0.5">
+            {linkDemo && (
+              <a
+                href={linkDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-600 hover:text-emerald-400 transition-colors duration-200"
+                aria-label="Demo"
+                title="Ver demo"
+              >
+                <FaExternalLinkAlt className="text-base" />
+              </a>
+            )}
+            <a
+              href={linkGitHub}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-600 hover:text-emerald-400 transition-colors duration-200"
+              aria-label="GitHub"
+            >
+              <FaGithub className="text-lg" />
+            </a>
+          </div>
         </div>
 
         {/* Tech stack */}

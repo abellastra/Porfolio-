@@ -32,17 +32,23 @@ function Hero() {
             </span>
           </h1>
           <p className="text-emerald-400 text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase mt-3">
-            Desarrollador FullStack Jr
+            Desarrollador Full Stack
           </p>
         </div>
 
         <p className="text-zinc-400 text-base md:text-lg max-w-md leading-relaxed">
-          2 años de experiencia en desarrollo web full stack. Especializado en{" "}
-          <span className="text-emerald-400 font-medium">React</span>,{" "}
+          Desarrollador Full Stack con experiencia trabajando en equipo en proyectos
+          reales, desde el frontend hasta el deploy en producción. Trabajo principalmente
+          con <span className="text-emerald-400 font-medium">React</span>,{" "}
+          <span className="text-emerald-400 font-medium">Next.js</span>,{" "}
           <span className="text-emerald-400 font-medium">Node.js</span> y{" "}
-          <span className="text-emerald-400 font-medium">TypeScript</span>.
-          Construyo aplicaciones modulares y escalables con foco en buenas
-          prácticas y experiencia de usuario.
+          <span className="text-emerald-400 font-medium">TypeScript</span>, y también con
+          Go, PostgreSQL y Docker.
+        </p>
+
+        <p className="text-zinc-500 text-sm max-w-md leading-relaxed -mt-2">
+          Tomo requerimientos, los divido en tareas y los entrego con tests y revisión de
+          código. Busco un equipo donde seguir creciendo y aportar desde el primer día.
         </p>
 
         {/* Acciones */}

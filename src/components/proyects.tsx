@@ -18,6 +18,7 @@ type Project = {
   img: string;
   imgWepp: string;
   linkGitHub: string;
+  linkDemo?: string;
 };
 
 const PER_PAGE = 2;

@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaCode, FaBook, FaLightbulb } from "react-icons/fa";
+import { FaGraduationCap, FaCode, FaBook, FaLightbulb, FaLanguage } from "react-icons/fa";
 
 function AcademicInformation() {
   const items = [
@@ -15,12 +15,17 @@ function AcademicInformation() {
     {
       icon: <FaBook className="text-emerald-400" />,
       title: "Formación autodidacta",
-      detail: "YouTube, Platzi y documentación oficial · Desarrollo web, backend, DevOps y arquitectura moderna",
+      detail: "YouTube, Platzi y proyectos propios · Aprendizaje continuo mediante proyectos reales",
     },
     {
       icon: <FaLightbulb className="text-emerald-400" />,
-      title: "2 años de práctica real",
-      detail: "Proyectos propios full stack con React, Node.js, TypeScript, PostgreSQL, Docker e integración de APIs de IA",
+      title: "Metodologías",
+      detail: "Scrum, code review, conventional commits y gestión por tickets",
+    },
+    {
+      icon: <FaLanguage className="text-emerald-400" />,
+      title: "Idiomas",
+      detail: "Español — Nativo · Inglés — Básico",
     },
   ];
 
@@ -34,9 +39,9 @@ function AcademicInformation() {
       {/* Intro */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
         <p className="text-zinc-300 text-base leading-relaxed border-l-2 border-emerald-500 pl-4">
-          Construí una base sólida como desarrollador full stack a través del aprendizaje
-          autodidacta, combinando cursos prácticos con proyectos reales. Cada proyecto es
-          una oportunidad para aplicar nuevas tecnologías y mejorar mi estructura de código.
+          Construí mi base como desarrollador full stack a través del aprendizaje
+          autodidacta y cursos prácticos, y hoy la sigo ampliando trabajando en equipo en
+          proyectos reales en producción.
         </p>
       </div>
 
@@ -45,7 +50,7 @@ function AcademicInformation() {
         {items.map((item, i) => (
           <div
             key={i}
-            className="flex items-start gap-4 bg-zinc-900 border border-zinc-800 rounded-xl p-5 hover:border-zinc-700 transition-colors duration-200"
+            className="flex items-start gap-4 bg-zinc-900 last:odd:sm:col-span-2 border border-zinc-800 rounded-xl p-5 hover:border-zinc-700 transition-colors duration-200"
           >
             <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/20 shrink-0 text-base">
               {item.icon}

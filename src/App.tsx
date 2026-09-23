@@ -3,6 +3,7 @@ import Proyects from "./components/proyects";
 import "./App.css";
 import Hero from "./components/Hero";
 import AcademicInformation from "./components/AcademicInformation";
+import Experience from "./components/Experience";
 import SideBar from "./components/SideBar";
 import { useState } from "react";
 
@@ -15,6 +16,8 @@ function App() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-8 flex flex-col gap-20 pb-24">
         <Hero />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
+        <Experience />
         <div className="w-full h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
         <Proyects typoOfFilter={typoOfFilter} />
         <div className="w-full h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
